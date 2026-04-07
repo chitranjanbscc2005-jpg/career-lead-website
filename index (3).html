@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>200+ Career Opportunities for Indian Gen Z | Career Clarity</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a0f2e;
+    --navy2: #111838;
+    --navy3: #1a2550;
+    --accent: #00d4aa;
+    --accent2: #0099ff;
+    --yellow: #ffd600;
+    --green-wa: #25d366;
+    --white: #ffffff;
+    --white80: rgba(255,255,255,0.8);
+    --white50: rgba(255,255,255,0.5);
+    --white15: rgba(255,255,255,0.07);
+    --card-bg: rgba(255,255,255,0.05);
+    --card-border: rgba(255,255,255,0.1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* STICKY BAR */
+  .sticky-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,15,46,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--card-border);
+    padding: 12px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+  }
+  .sticky-bar .brand { font-weight: 700; font-size: 15px; color: var(--accent); }
+  .sticky-bar .cta-btn-sm {
+    background: var(--green-wa); color: #fff; font-weight: 700;
+    font-size: 13px; padding: 8px 18px; border-radius: 100px;
+    white-space: nowrap; transition: transform 0.2s;
+  }
+  .sticky-bar .cta-btn-sm:hover { transform: scale(1.04); }
+
+  /* FLOATING WA BUTTON */
+  .wa-float {
+    position: fixed; bottom: 28px; right: 24px; z-index: 999;
+    background: var(--green-wa); color: #fff;
+    width: 58px; height: 58px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 24px rgba(37,211,102,0.45);
+    font-size: 28px; transition: transform 0.2s;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+  /* SECTIONS */
+  section { padding: 80px 20px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* HERO */
+  .hero {
+    padding: 140px 20px 80px;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,212,170,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(0,153,255,0.12) 0%, transparent 60%),
+                var(--navy);
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.35);
+    color: var(--accent); font-size: 13px; font-weight: 600;
+    padding: 6px 16px; border-radius: 100px; margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 6vw, 68px);
+    font-weight: 800; line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: var(--white80); max-width: 660px; margin: 0 auto 36px;
+  }
+  .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--green-wa); color: #fff; font-weight: 700;
+    font-size: 16px; padding: 16px 32px; border-radius: 100px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(37,211,102,0.35);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    border: 1.5px solid var(--card-border); font-weight: 600;
+    font-size: 16px; padding: 16px 32px; border-radius: 100px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--accent); background: rgba(0,212,170,0.08); }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    margin-top: 56px; padding-top: 40px;
+    border-top: 1px solid var(--card-border);
+  }
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 36px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 13px; color: var(--white50); margin-top: 4px; }
+
+  /* SECTION LABELS */
+  .section-label {
+    display: inline-block;
+    background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.25);
+    color: var(--accent); font-size: 12px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 100px; margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: clamp(26px, 4vw, 42px); font-weight: 800;
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .section-title span { color: var(--accent); }
+  .section-sub { font-size: 17px; color: var(--white80); max-width: 640px; }
+  .section-header { margin-bottom: 52px; }
+
+  /* PROBLEM SECTION */
+  .problem { background: var(--navy2); }
+  .problem-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px; margin-top: 40px;
+  }
+  .problem-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 16px; padding: 28px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .problem-card:hover { border-color: rgba(0,212,170,0.4); transform: translateY(-4px); }
+  .problem-icon { font-size: 32px; margin-bottom: 14px; }
+  .problem-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .problem-card p { font-size: 14px; color: var(--white80); line-height: 1.6; }
+
+  /* CAREER CATEGORIES */
+  .categories { background: var(--navy); }
+  .cat-filter {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px;
+  }
+  .cat-btn {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    color: var(--white80); font-size: 13px; font-weight: 600;
+    padding: 8px 18px; border-radius: 100px; cursor: pointer;
+    transition: all 0.2s; font-family: inherit;
+  }
+  .cat-btn:hover, .cat-btn.active {
+    background: rgba(0,212,170,0.15); border-color: var(--accent); color: var(--accent);
+  }
+  .cat-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .cat-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 16px; padding: 24px;
+    transition: all 0.3s;
+  }
+  .cat-card:hover { border-color: rgba(0,153,255,0.4); transform: translateY(-3px); }
+  .cat-card-head {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+  }
+  .cat-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: rgba(0,212,170,0.12); display: flex;
+    align-items: center; justify-content: center; font-size: 20px;
+    flex-shrink: 0;
+  }
+  .cat-card h3 { font-size: 16px; font-weight: 700; }
+  .cat-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .cat-tag {
+    background: var(--white15); border: 1px solid var(--card-border);
+    color: var(--white80); font-size: 12px; padding: 4px 10px; border-radius: 100px;
+  }
+
+  /* CAREER ROADMAPS */
+  .roadmaps { background: var(--navy2); }
+  .roadmap-search {
+    display: flex; align-items: center;
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 12px; padding: 12px 18px; gap: 10px;
+    max-width: 420px; margin-bottom: 36px;
+  }
+  .roadmap-search input {
+    background: none; border: none; outline: none;
+    color: var(--white); font-size: 15px; width: 100%;
+    font-family: inherit;
+  }
+  .roadmap-search input::placeholder { color: var(--white50); }
+  .roadmap-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  .career-card {
+    background: var(--navy3); border: 1px solid var(--card-border);
+    border-radius: 18px; overflow: hidden; transition: all 0.3s;
+  }
+  .career-card:hover { border-color: rgba(0,212,170,0.35); box-shadow: 0 8px 32px rgba(0,212,170,0.08); }
+  .career-head {
+    padding: 22px 24px 18px;
+    border-bottom: 1px solid var(--card-border);
+  }
+  .career-head-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  .career-name { font-size: 17px; font-weight: 700; }
+  .salary-badge {
+    background: rgba(0,212,170,0.15); border: 1px solid rgba(0,212,170,0.3);
+    color: var(--accent); font-size: 12px; font-weight: 700;
+    padding: 4px 10px; border-radius: 100px; white-space: nowrap;
+  }
+  .career-desc { font-size: 13px; color: var(--white80); line-height: 1.5; }
+  .career-body { padding: 20px 24px; }
+  .roadmap-stages { display: flex; flex-direction: column; gap: 14px; }
+  .stage {
+    display: flex; gap: 12px;
+  }
+  .stage-dot {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; margin-top: 2px;
+  }
+  .stage-dot.beginner { background: rgba(0,212,170,0.2); color: var(--accent); }
+  .stage-dot.mid { background: rgba(0,153,255,0.2); color: var(--accent2); }
+  .stage-dot.adv { background: rgba(255,214,0,0.2); color: var(--yellow); }
+  .stage-content h4 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .stage-content p { font-size: 12px; color: var(--white80); line-height: 1.55; }
+  .career-skills {
+    margin-top: 16px; padding-top: 16px;
+    border-top: 1px solid var(--card-border);
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .skill-tag {
+    background: var(--white15); color: var(--white80);
+    font-size: 11px; padding: 3px 9px; border-radius: 100px;
+  }
+  .show-more-wrap { text-align: center; margin-top: 36px; }
+  .btn-outline {
+    background: transparent; border: 1.5px solid var(--card-border);
+    color: var(--white); font-weight: 600; font-size: 15px;
+    padding: 14px 32px; border-radius: 100px; cursor: pointer;
+    transition: all 0.2s; font-family: inherit;
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* HOW TO CHOOSE */
+  .choose { background: var(--navy); }
+  .choose-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px; margin-top: 40px;
+  }
+  .choose-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 22px;
+    transition: all 0.3s;
+  }
+  .choose-card:hover { border-color: rgba(0,153,255,0.4); transform: translateY(-3px); }
+  .choose-num {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: rgba(0,153,255,0.15); color: var(--accent2);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 15px; margin-bottom: 12px;
+  }
+  .choose-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .choose-card p { font-size: 13px; color: var(--white80); }
+
+  /* PREPARATION ROADMAP */
+  .prep { background: var(--navy2); }
+  .steps { display: flex; flex-direction: column; gap: 0; max-width: 700px; }
+  .step {
+    display: flex; gap: 20px; padding-bottom: 32px; position: relative;
+  }
+  .step:not(:last-child)::before {
+    content: '';
+    position: absolute; left: 19px; top: 44px; bottom: 0;
+    width: 2px; background: var(--card-border);
+  }
+  .step-num {
+    flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+    background: var(--navy3); border: 2px solid var(--accent);
+    color: var(--accent); font-weight: 700; font-size: 15px;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1;
+  }
+  .step-content h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .step-content p { font-size: 14px; color: var(--white80); }
+
+  /* COLLEGE VERIFICATION */
+  .college { background: var(--navy); }
+  .verify-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px; margin-top: 40px;
+  }
+  .verify-item {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 20px; display: flex; gap: 14px;
+    transition: border-color 0.3s;
+  }
+  .verify-item:hover { border-color: rgba(0,212,170,0.4); }
+  .verify-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: rgba(0,212,170,0.12); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0; margin-top: 2px;
+  }
+  .verify-item h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .verify-item p { font-size: 13px; color: var(--white80); }
+
+  /* GUIDANCE CTA */
+  .guidance-cta {
+    background: linear-gradient(135deg, rgba(0,212,170,0.15) 0%, rgba(0,153,255,0.1) 100%);
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    text-align: center;
+  }
+  .guidance-cta h2 { font-size: clamp(24px, 4vw, 40px); font-weight: 800; margin-bottom: 16px; }
+  .guidance-cta p { font-size: 17px; color: var(--white80); max-width: 580px; margin: 0 auto 36px; }
+  .cta-features {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 40px;
+  }
+  .cta-feature {
+    background: var(--white15); border: 1px solid var(--card-border);
+    border-radius: 100px; padding: 8px 18px; font-size: 14px; color: var(--white80);
+  }
+  .cta-feature span { color: var(--accent); margin-right: 6px; }
+
+  /* FAQ */
+  .faq { background: var(--navy2); }
+  .faq-list { max-width: 760px; display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 14px; overflow: hidden;
+  }
+  .faq-q {
+    padding: 20px 24px; font-size: 15px; font-weight: 600;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; gap: 12px;
+  }
+  .faq-q:hover { color: var(--accent); }
+  .faq-icon {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--white15); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; transition: transform 0.3s;
+  }
+  .faq-a {
+    max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s;
+    font-size: 14px; color: var(--white80);
+    padding: 0 24px;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 20px; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent); }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(0,212,170,0.15) 0%, transparent 70%), var(--navy);
+    text-align: center;
+  }
+  .final-cta h2 { font-size: clamp(26px, 5vw, 52px); font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+  .final-cta h2 span { color: var(--accent); }
+  .final-cta p { font-size: 18px; color: var(--white80); max-width: 560px; margin: 0 auto 40px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy2); border-top: 1px solid var(--card-border);
+    text-align: center; padding: 28px 20px;
+    font-size: 13px; color: var(--white50);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    section { padding: 60px 16px; }
+    .hero { padding: 120px 16px 60px; }
+    .roadmap-grid { grid-template-columns: 1fr; }
+    .cat-grid { grid-template-columns: 1fr; }
+    .sticky-bar { padding: 10px 16px; }
+  }
+
+  /* COUNTERS */
+  @keyframes countUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .stat-num { animation: countUp 0.8s ease both; }
+
+  /* HIDDEN CARDS */
+  .career-card.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <span class="brand">🎯 Career Clarity</span>
+  <a href="https://wa.me/919798686973" class="cta-btn-sm">💬 WhatsApp Now</a>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919798686973" class="wa-float" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">🚀 Career Clarity for Indian Gen Z Students</div>
+    <h1>Discover <span>200+ High-Potential</span><br>Career Opportunities</h1>
+    <p>Most Indian students know only 5 career options. The real world has 200+ paths — with great salary, growth, and respect. Let's find yours.</p>
+    <div class="cta-group">
+      <a href="https://wa.me/919798686973" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Get Free Career Guidance
+      </a>
+      <a href="#roadmaps" class="btn-secondary">Explore 200+ Careers ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num" data-target="200">0</div><div class="stat-label">Career Paths</div></div>
+      <div class="stat-item"><div class="stat-num" data-target="500">0</div><div class="stat-label">Students Guided</div></div>
+      <div class="stat-item"><div class="stat-num" data-target="20">0</div><div class="stat-label">Career Roadmaps</div></div>
+      <div class="stat-item"><div class="stat-num">Free</div><div class="stat-label">WhatsApp Guidance</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM SECTION -->
+<section class="problem">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">The Real Problem</span>
+      <h2 class="section-title">Why Do Most Students <span>Struggle</span> with Careers?</h2>
+      <p class="section-sub">It's not your fault. The system never showed you the full picture. Here's what actually happens.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">😰</div>
+        <h3>Only 5 Options Shown</h3>
+        <p>Family, school, and society push you toward Doctor, Engineer, Lawyer, UPSC, or SSC — and nothing else. This is dangerously incomplete.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📱</div>
+        <h3>Wrong Information Online</h3>
+        <p>Most career content online is made for global audiences, not Indian students. What works abroad doesn't always work here.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">👥</div>
+        <h3>Peer & Family Pressure</h3>
+        <p>"Log kya kahenge?" — this single question destroys thousands of brilliant careers every year. You end up choosing someone else's dream.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📉</div>
+        <h3>Wrong Course = Low Salary</h3>
+        <p>Students pick courses without understanding job scope, market demand, or salary potential. 3 years wasted, low-paying job, full regret.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🏛️</div>
+        <h3>Fake College Trap</h3>
+        <p>Many colleges promise placement, charge high fees, but deliver nothing. Without proper guidance, students fall into these traps every year.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔮</div>
+        <h3>No Clear Roadmap</h3>
+        <p>Even if you pick a good career, you don't know HOW to get there. Step-by-step roadmaps are missing for most students.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER CATEGORIES -->
+<section class="categories" id="categories">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">200+ Opportunities</span>
+      <h2 class="section-title">Career Categories You <span>Never Knew</span> Existed</h2>
+      <p class="section-sub">Filter by your interest and discover what's possible.</p>
+    </div>
+    <div class="cat-filter">
+      <button class="cat-btn active" onclick="filterCats('all', this)">All</button>
+      <button class="cat-btn" onclick="filterCats('tech', this)">Technology</button>
+      <button class="cat-btn" onclick="filterCats('business', this)">Business</button>
+      <button class="cat-btn" onclick="filterCats('creative', this)">Creative</button>
+      <button class="cat-btn" onclick="filterCats('govt', this)">Government</button>
+      <button class="cat-btn" onclick="filterCats('medical', this)">Medical</button>
+      <button class="cat-btn" onclick="filterCats('finance', this)">Finance</button>
+    </div>
+    <div class="cat-grid" id="catGrid">
+      <div class="cat-card" data-cat="tech"><div class="cat-card-head"><div class="cat-icon">💻</div><h3>Technology & IT</h3></div><div class="cat-tags"><span class="cat-tag">AI/ML Engineer</span><span class="cat-tag">Cyber Security</span><span class="cat-tag">Cloud Architect</span><span class="cat-tag">DevOps</span><span class="cat-tag">Game Dev</span><span class="cat-tag">Blockchain Dev</span></div></div>
+      <div class="cat-card" data-cat="business"><div class="cat-card-head"><div class="cat-icon">📊</div><h3>Business & Management</h3></div><div class="cat-tags"><span class="cat-tag">MBA Finance</span><span class="cat-tag">Product Manager</span><span class="cat-tag">Business Analyst</span><span class="cat-tag">Operations</span><span class="cat-tag">HR Manager</span></div></div>
+      <div class="cat-card" data-cat="creative"><div class="cat-card-head"><div class="cat-icon">🎨</div><h3>Creative & Media</h3></div><div class="cat-tags"><span class="cat-tag">UI/UX Designer</span><span class="cat-tag">Video Editor</span><span class="cat-tag">Content Creator</span><span class="cat-tag">Graphic Designer</span><span class="cat-tag">Animator</span></div></div>
+      <div class="cat-card" data-cat="govt"><div class="cat-card-head"><div class="cat-icon">🏛️</div><h3>Government & Public Service</h3></div><div class="cat-tags"><span class="cat-tag">IAS/IPS</span><span class="cat-tag">Defence Forces</span><span class="cat-tag">Banking (IBPS)</span><span class="cat-tag">PSU Jobs</span><span class="cat-tag">Railway</span></div></div>
+      <div class="cat-card" data-cat="medical"><div class="cat-card-head"><div class="cat-icon">⚕️</div><h3>Medical & Paramedical</h3></div><div class="cat-tags"><span class="cat-tag">MBBS Doctor</span><span class="cat-tag">Nursing</span><span class="cat-tag">Physiotherapy</span><span class="cat-tag">Pharmacy</span><span class="cat-tag">Nutritionist</span></div></div>
+      <div class="cat-card" data-cat="finance"><div class="cat-card-head"><div class="cat-icon">💰</div><h3>Finance & Banking</h3></div><div class="cat-tags"><span class="cat-tag">CA / CMA</span><span class="cat-tag">Investment Banker</span><span class="cat-tag">Stock Analyst</span><span class="cat-tag">FinTech</span><span class="cat-tag">Insurance</span></div></div>
+      <div class="cat-card" data-cat="tech"><div class="cat-card-head"><div class="cat-icon">🛡️</div><h3>Cyber Security</h3></div><div class="cat-tags"><span class="cat-tag">Ethical Hacker</span><span class="cat-tag">Penetration Tester</span><span class="cat-tag">SOC Analyst</span><span class="cat-tag">Forensics</span></div></div>
+      <div class="cat-card" data-cat="creative"><div class="cat-card-head"><div class="cat-icon">✈️</div><h3>Aviation & Travel</h3></div><div class="cat-tags"><span class="cat-tag">Commercial Pilot</span><span class="cat-tag">Cabin Crew</span><span class="cat-tag">ATC Officer</span><span class="cat-tag">Travel Blogger</span></div></div>
+      <div class="cat-card" data-cat="business"><div class="cat-card-head"><div class="cat-icon">🌍</div><h3>International Careers</h3></div><div class="cat-tags"><span class="cat-tag">Foreign Services</span><span class="cat-tag">Global MBA</span><span class="cat-tag">Expat Jobs</span><span class="cat-tag">Forex Analyst</span></div></div>
+      <div class="cat-card" data-cat="creative"><div class="cat-card-head"><div class="cat-icon">🏗️</div><h3>Architecture & Design</h3></div><div class="cat-tags"><span class="cat-tag">Architect</span><span class="cat-tag">Interior Designer</span><span class="cat-tag">Urban Planner</span><span class="cat-tag">Landscape</span></div></div>
+      <div class="cat-card" data-cat="business"><div class="cat-card-head"><div class="cat-icon">🚀</div><h3>Entrepreneurship</h3></div><div class="cat-tags"><span class="cat-tag">Startup Founder</span><span class="cat-tag">E-commerce</span><span class="cat-tag">Franchise Owner</span><span class="cat-tag">Angel Investor</span></div></div>
+      <div class="cat-card" data-cat="medical"><div class="cat-card-head"><div class="cat-icon">🧠</div><h3>Psychology & Counselling</h3></div><div class="cat-tags"><span class="cat-tag">Clinical Psych</span><span class="cat-tag">Career Counsellor</span><span class="cat-tag">Child Psych</span><span class="cat-tag">Therapist</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER ROADMAPS -->
+<section class="roadmaps" id="roadmaps">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Detailed Roadmaps</span>
+      <h2 class="section-title">Career Roadmaps: <span>Beginner to Advanced</span></h2>
+      <p class="section-sub">Step-by-step guide for 20 high-demand careers with salary, skills, and preparation plan.</p>
+    </div>
+    <div class="roadmap-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="careerSearch" placeholder="Search careers..." oninput="searchCareers(this.value)">
+    </div>
+    <div class="roadmap-grid" id="roadmapGrid">
+
+      <!-- AI Engineer -->
+      <div class="career-card" data-name="artificial intelligence engineer ai">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🤖 AI / ML Engineer</span><span class="salary-badge">₹8–25 LPA</span></div><p class="career-desc">Build intelligent systems that learn, predict, and automate. One of the fastest-growing fields globally.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner — 0–6 months</h4><p>Learn Python basics, math (statistics, linear algebra). Start with free courses on Kaggle, NPTEL. Understand data types and Excel.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate — 6–18 months</h4><p>Study Machine Learning (Scikit-learn), Deep Learning (TensorFlow/PyTorch). Do 2–3 ML projects on Kaggle. Learn SQL and data wrangling.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced — 18 months+</h4><p>Specialise in NLP, Computer Vision, or LLMs. Build a GitHub portfolio. Apply for internships. Target MNCs and AI startups.</p></div></div></div><div class="career-skills"><span class="skill-tag">Python</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Statistics</span><span class="skill-tag">SQL</span><span class="skill-tag">Deep Learning</span></div></div>
+      </div>
+
+      <!-- Data Scientist -->
+      <div class="career-card" data-name="data scientist analytics">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">📊 Data Scientist</span><span class="salary-badge">₹6–20 LPA</span></div><p class="career-desc">Turn raw data into business insights. High demand in every industry — from finance to healthcare to e-commerce.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn Excel, basic Python or R. Understand statistics. Take free courses on Coursera (IBM Data Science). Practice data cleaning.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Learn Pandas, NumPy, Matplotlib, Seaborn. Practice on real datasets. Learn Power BI or Tableau for visualisation.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Master ML algorithms, A/B testing, business case solving. Get certified (Google Data Analytics). Apply at Flipkart, Paytm, startups.</p></div></div></div><div class="career-skills"><span class="skill-tag">Python/R</span><span class="skill-tag">Power BI</span><span class="skill-tag">SQL</span><span class="skill-tag">Statistics</span></div></div>
+      </div>
+
+      <!-- Cyber Security -->
+      <div class="career-card" data-name="cyber security ethical hacker">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🛡️ Cyber Security Expert</span><span class="salary-badge">₹5–18 LPA</span></div><p class="career-desc">Protect digital infrastructure from hackers and threats. Massive demand as every company goes digital.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn networking basics (TCP/IP, DNS), Linux fundamentals. Start TryHackMe free rooms. Understand how attacks work.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Learn penetration testing tools (Nmap, Burp Suite, Metasploit). Compete in CTF (Capture The Flag) competitions.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Get certified: CEH, CompTIA Security+, OSCP. Do bug bounties on HackerOne. Join government/MNC security teams.</p></div></div></div><div class="career-skills"><span class="skill-tag">Linux</span><span class="skill-tag">Networking</span><span class="skill-tag">Burp Suite</span><span class="skill-tag">CEH</span></div></div>
+      </div>
+
+      <!-- Software Developer -->
+      <div class="career-card" data-name="software developer programmer">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">💻 Software Developer</span><span class="salary-badge">₹4–15 LPA</span></div><p class="career-desc">Build apps, websites, and software products. Most in-demand job globally. High-paying with remote work options.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Pick one language: Python, JavaScript, or Java. Learn basics with free resources (freeCodeCamp, Programiz). Build 1–2 simple projects.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Learn Web Dev (HTML, CSS, React/Node) or App Dev (Flutter/Kotlin). Build projects and push them to GitHub. Start open-source contributions.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Master DSA, system design. Do internships. Target product companies (FAANG prep), or freelancing on Upwork/Toptal.</p></div></div></div><div class="career-skills"><span class="skill-tag">DSA</span><span class="skill-tag">React</span><span class="skill-tag">System Design</span><span class="skill-tag">Git</span></div></div>
+      </div>
+
+      <!-- UI/UX Designer -->
+      <div class="career-card" data-name="ui ux designer product design">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🎨 UI/UX Designer</span><span class="salary-badge">₹4–14 LPA</span></div><p class="career-desc">Design apps and websites that are beautiful and easy to use. High demand, freelancing possible from day one.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn design principles (color, typography, layout). Master Figma (free tool). Study successful apps and redesign them as practice.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Learn user research methods, wireframing, prototyping. Build a Behance portfolio. Do 3+ real-world case studies.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Get hired by startups or agencies. Do freelance projects. Target product companies. Specialise in Mobile App or SaaS design.</p></div></div></div><div class="career-skills"><span class="skill-tag">Figma</span><span class="skill-tag">User Research</span><span class="skill-tag">Prototyping</span><span class="skill-tag">Design Systems</span></div></div>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="career-card" data-name="digital marketing seo social media">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">📱 Digital Marketer</span><span class="salary-badge">₹3–12 LPA</span></div><p class="career-desc">Promote brands online through SEO, ads, social media, and content. Every business needs a digital marketer today.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn SEO basics, Google Ads, and Meta Ads. Take Google Digital Garage free certification. Start a personal blog or Instagram page.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Learn email marketing, content strategy, analytics (Google Analytics 4). Run ads for small businesses for practice. Track ROI.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Master performance marketing, growth hacking. Freelance or join marketing agencies. Specialise in D2C brand marketing or B2B SaaS.</p></div></div></div><div class="career-skills"><span class="skill-tag">SEO</span><span class="skill-tag">Meta Ads</span><span class="skill-tag">Google Ads</span><span class="skill-tag">Analytics</span></div></div>
+      </div>
+
+      <!-- Product Manager -->
+      <div class="career-card" data-name="product manager pm">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🧩 Product Manager</span><span class="salary-badge">₹10–30 LPA</span></div><p class="career-desc">The CEO of the product. You decide what to build, why, and when. High-paying role in any tech company.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Read "Inspired" by Marty Cagan. Learn about user stories, PRDs, and product roadmaps. Follow Product School on YouTube.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Transition from software dev, design, or MBA. Learn Jira, Notion, Figma basics. Study Swiggy, Zomato products deeply.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Get certified (PM School, Reforge). Apply to startups as Associate PM. Build case studies. Target unicorns after 2–3 years experience.</p></div></div></div><div class="career-skills"><span class="skill-tag">Strategy</span><span class="skill-tag">Jira</span><span class="skill-tag">Analytics</span><span class="skill-tag">Roadmapping</span></div></div>
+      </div>
+
+      <!-- Content Creator -->
+      <div class="career-card" data-name="content creator youtuber instagram influencer">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🎬 Content Creator</span><span class="salary-badge">₹2–50 LPA+</span></div><p class="career-desc">Build an audience on YouTube, Instagram, or Podcasts. Multiple income streams: brand deals, courses, AdSense, affiliate.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Pick your niche (education, finance, fitness, comedy). Start posting consistently. Learn basic video editing on CapCut or DaVinci Resolve.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Study YouTube SEO, Reel algorithms. Collaborate with other creators. Start newsletter or community. Reach 10K followers milestone.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Monetize: brand sponsorships, paid courses, Patreon, merchandise. Scale to a team. Diversify across platforms.</p></div></div></div><div class="career-skills"><span class="skill-tag">Video Editing</span><span class="skill-tag">Scripting</span><span class="skill-tag">SEO</span><span class="skill-tag">Personal Brand</span></div></div>
+      </div>
+
+      <!-- Investment Banker -->
+      <div class="career-card" data-name="investment banker finance">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">💹 Investment Banker</span><span class="salary-badge">₹8–40 LPA</span></div><p class="career-desc">Help companies raise money, merge, or go public. One of the highest-paying careers in India. Prestigious and fast-paced.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn financial modelling basics. Study economics, accounting. Read "The Intelligent Investor". Follow BSE/NSE markets daily.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Get B.Com/BBA + MBA Finance from top college. Learn Excel financial modelling. Do internships at NBFCs or investment firms.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Target IIMs or top B-schools for MBA. Get placed at Kotak, Goldman Sachs, ICICI Securities. Consider CFA certification.</p></div></div></div><div class="career-skills"><span class="skill-tag">Financial Modelling</span><span class="skill-tag">Excel</span><span class="skill-tag">Valuation</span><span class="skill-tag">CFA</span></div></div>
+      </div>
+
+      <!-- Graphic Designer -->
+      <div class="career-card" data-name="graphic designer visual brand">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🖌️ Graphic Designer</span><span class="salary-badge">₹2.5–10 LPA</span></div><p class="career-desc">Create visual identities, posters, social media content, and brand kits. High freelance potential from early stage.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn Adobe Illustrator, Photoshop, or free tool Canva. Study design principles. Copy 10 professional designs to understand technique.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Build a portfolio on Behance/Dribbble. Offer free work to 2–3 local businesses. Learn brand identity and logo design.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Freelance on Fiverr, 99designs. Join creative agencies. Specialise in brand identity, packaging, or motion graphics.</p></div></div></div><div class="career-skills"><span class="skill-tag">Illustrator</span><span class="skill-tag">Photoshop</span><span class="skill-tag">Brand Identity</span><span class="skill-tag">Typography</span></div></div>
+      </div>
+
+      <!-- Psychologist -->
+      <div class="career-card" data-name="psychologist counsellor mental health">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🧠 Psychologist</span><span class="salary-badge">₹4–15 LPA</span></div><p class="career-desc">Understand and support human behaviour and mental health. Fastest-growing field in India as mental health awareness rises.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Take BA/BSc in Psychology. Study cognitive, developmental, and clinical psychology basics. Learn counselling communication skills.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Pursue MA Clinical or Counselling Psychology. Do internship at hospitals or NGOs. Learn CBT therapy techniques.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Get RCI license for clinical practice. Specialise in child psychology, sports psych, or corporate wellness. Set up private practice.</p></div></div></div><div class="career-skills"><span class="skill-tag">CBT</span><span class="skill-tag">Counselling</span><span class="skill-tag">Assessment</span><span class="skill-tag">RCI License</span></div></div>
+      </div>
+
+      <!-- Pilot -->
+      <div class="career-card" data-name="pilot aviation aircraft">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">✈️ Commercial Pilot</span><span class="salary-badge">₹15–50 LPA</span></div><p class="career-desc">Fly commercial aircraft across India and internationally. Prestigious, well-paid, and adventurous career path.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Complete 12th with Physics & Maths (min 50%). Clear Class 2 Medical. Shortlist DGCA-approved flying schools in India or abroad.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Enroll in CPL (Commercial Pilot License) training. Log 200+ flying hours. Clear DGCA ground exams (Navigation, Meteorology, Air Law).</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Get type rating for aircraft (Boeing/Airbus). Apply to IndiGo, Air India, SpiceJet. Build hours and move to senior captain role.</p></div></div></div><div class="career-skills"><span class="skill-tag">CPL</span><span class="skill-tag">DGCA Exams</span><span class="skill-tag">Flying Hours</span><span class="skill-tag">Type Rating</span></div></div>
+      </div>
+
+      <!-- Cloud Engineer -->
+      <div class="career-card" data-name="cloud engineer aws azure devops">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">☁️ Cloud Engineer</span><span class="salary-badge">₹7–20 LPA</span></div><p class="career-desc">Design and manage cloud infrastructure for companies on AWS, Azure, or GCP. Massive demand with remote work options.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn Linux and networking basics. Create a free AWS account. Complete AWS Cloud Practitioner course on official website.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Learn Docker, Kubernetes, Terraform. Get AWS Solutions Architect Associate certification. Build cloud projects.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Specialise in DevOps or Cloud Security. Get AWS Professional or GCP Professional cert. Target global companies with remote hiring.</p></div></div></div><div class="career-skills"><span class="skill-tag">AWS/Azure</span><span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">Terraform</span></div></div>
+      </div>
+
+      <!-- Lawyer -->
+      <div class="career-card" data-name="lawyer legal advocate">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">⚖️ Lawyer / Advocate</span><span class="salary-badge">₹3–20 LPA+</span></div><p class="career-desc">Represent clients in courts, advise on law, draft contracts. Specialise in corporate law for highest earnings.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Clear CLAT for NLUs (National Law Universities). Study BA LLB or BBA LLB (5 years). Understand IPC, CrPC, Constitution basics.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Complete internships at law firms or courts during college. Moot court competitions build confidence. Choose specialisation (criminal, corporate, IP).</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Enroll with Bar Council. Join top law firms (Cyril Amarchand, AZB). Corporate lawyers earn ₹15–40 LPA. Consider LLM for specialisation.</p></div></div></div><div class="career-skills"><span class="skill-tag">CLAT</span><span class="skill-tag">Research</span><span class="skill-tag">Drafting</span><span class="skill-tag">Advocacy</span></div></div>
+      </div>
+
+      <!-- Nursing -->
+      <div class="career-card" data-name="nursing nurse paramedical">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">👩‍⚕️ Nursing Professional</span><span class="salary-badge">₹3–10 LPA</span></div><p class="career-desc">Critical healthcare role with massive job security. High demand in India, Middle East, UK, USA, and Canada.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Pursue GNM (3 years) or BSc Nursing (4 years) after 12th Science. Learn anatomy, pharmacology, patient care basics.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Do hospital internship. Learn ICU, OT, emergency care. Get registered with State Nursing Council. Target government hospitals.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Pursue MSc Nursing for specialisation. Apply abroad (NCLEX for USA, CBT for UK). Earn ₹20–40 LPA in Gulf or Western countries.</p></div></div></div><div class="career-skills"><span class="skill-tag">Patient Care</span><span class="skill-tag">ICU Care</span><span class="skill-tag">Pharmacology</span><span class="skill-tag">NCLEX</span></div></div>
+      </div>
+
+      <!-- Hotel Management -->
+      <div class="career-card" data-name="hotel management hospitality">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🏨 Hotel Manager</span><span class="salary-badge">₹4–15 LPA</span></div><p class="career-desc">Manage luxury hotels, resorts, and hospitality chains. Global travel possible. Great lifestyle and perks.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Pursue BHM (Bachelor in Hotel Management) from IHM colleges. Clear NCHM JEE exam. Learn F&B, housekeeping, front office basics.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Do internships at 5-star hotels. Learn revenue management, event planning, and guest relations. Build language skills.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Join Taj, Oberoi, Marriott, or international chains. Rise to F&B Manager, then General Manager. Explore international postings.</p></div></div></div><div class="career-skills"><span class="skill-tag">Guest Relations</span><span class="skill-tag">F&B</span><span class="skill-tag">Revenue Mgmt</span><span class="skill-tag">Languages</span></div></div>
+      </div>
+
+      <!-- Entrepreneur -->
+      <div class="career-card" data-name="entrepreneur startup business founder">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🚀 Entrepreneur</span><span class="salary-badge">₹0 → Unlimited</span></div><p class="career-desc">Start your own business and build something from scratch. Highest risk, highest reward. India's startup ecosystem is booming.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Identify a problem worth solving. Validate with 10 real conversations. Learn basics of business model, branding, and money management.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Build MVP (minimum viable product). Get first 10 paying customers. Learn GST registration, bank accounts, and business operations.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Scale marketing. Hire a team. Seek funding from angel investors or VCs. Apply to startup accelerators (Y Combinator, Shark Tank India).</p></div></div></div><div class="career-skills"><span class="skill-tag">Business Model</span><span class="skill-tag">Sales</span><span class="skill-tag">Fundraising</span><span class="skill-tag">Leadership</span></div></div>
+      </div>
+
+      <!-- Video Editor -->
+      <div class="career-card" data-name="video editor filmmaker production">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">🎬 Video Editor</span><span class="salary-badge">₹3–12 LPA</span></div><p class="career-desc">Edit videos for brands, YouTubers, films, and social media. High demand as video content explodes across all platforms.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn CapCut (free), then DaVinci Resolve (free). Edit your own short clips daily. Study pacing, cuts, and music timing.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Master Premiere Pro or Final Cut Pro. Learn color grading, sound design, motion graphics (After Effects basics). Build a reel.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Freelance for top YouTubers and brands. Join production houses. Specialise in documentary, ad films, or YouTube channel management.</p></div></div></div><div class="career-skills"><span class="skill-tag">Premiere Pro</span><span class="skill-tag">After Effects</span><span class="skill-tag">Color Grading</span><span class="skill-tag">Sound Design</span></div></div>
+      </div>
+
+      <!-- Business Analyst -->
+      <div class="career-card" data-name="business analyst strategy consulting">
+        <div class="career-head"><div class="career-head-top"><span class="career-name">📋 Business Analyst</span><span class="salary-badge">₹5–18 LPA</span></div><p class="career-desc">Bridge the gap between business needs and tech solutions. High demand in IT companies, consulting firms, and startups.</p></div>
+        <div class="career-body"><div class="roadmap-stages"><div class="stage"><div class="stage-dot beginner">B</div><div class="stage-content"><h4>Beginner</h4><p>Learn Excel, basic SQL, and business communication. Study case studies from BCG, McKinsey. Understand SWOT, PESTLE analysis.</p></div></div><div class="stage"><div class="stage-dot mid">M</div><div class="stage-content"><h4>Intermediate</h4><p>Learn requirement gathering, process modelling (BPMN), Power BI. Get CBAP or ECBA certification. Do 1–2 internships in IT companies.</p></div></div><div class="stage"><div class="stage-dot adv">A</div><div class="stage-content"><h4>Advanced</h4><p>Specialise in a domain (banking, healthcare, e-commerce). Move into product or strategy roles. Target consulting firms or MNCs.</p></div></div></div><div class="career-skills"><span class="skill-tag">SQL</span><span class="skill-tag">Power BI</span><span class="skill-tag">CBAP</span><span class="skill-tag">Process Modelling</span></div></div>
+      </div>
+
+    </div>
+    <div class="show-more-wrap">
+      <button class="btn-outline" id="showMoreBtn" onclick="showMoreCareers()">Show More Careers ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO CHOOSE -->
+<section class="choose" id="choose">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Decision Framework</span>
+      <h2 class="section-title">How to Choose the <span>Right Career</span> for You</h2>
+      <p class="section-sub">Use these 8 filters to make a smart, informed decision — not a random one.</p>
+    </div>
+    <div class="choose-grid">
+      <div class="choose-card"><div class="choose-num">1</div><h3>Your Interest</h3><p>What do you love doing even when no one is watching? Your natural interest = your best career clue.</p></div>
+      <div class="choose-card"><div class="choose-num">2</div><h3>Your Strengths</h3><p>What do people praise you for? What comes naturally to you? Strengths compound over time — leverage them.</p></div>
+      <div class="choose-card"><div class="choose-num">3</div><h3>Personality Fit</h3><p>Are you introverted or extroverted? Creative or analytical? Structured or spontaneous? Know yourself first.</p></div>
+      <div class="choose-card"><div class="choose-num">4</div><h3>Market Demand</h3><p>Is the career growing or shrinking? Avoid fields being automated. Look for 5–10 year future demand.</p></div>
+      <div class="choose-card"><div class="choose-num">5</div><h3>Salary Potential</h3><p>Research starting salary, average salary, and peak salary. Plan your financial future, not just today's pay.</p></div>
+      <div class="choose-card"><div class="choose-num">6</div><h3>Growth Path</h3><p>Does this career have a clear growth trajectory? Can you become a senior, manager, or entrepreneur in it?</p></div>
+      <div class="choose-card"><div class="choose-num">7</div><h3>Education Cost</h3><p>What degree or certification do you need? Is it affordable? Are scholarships available? Is it worth the investment?</p></div>
+      <div class="choose-card"><div class="choose-num">8</div><h3>Work-Life Balance</h3><p>How many hours does this career require? Does the lifestyle match your personal values and family goals?</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREPARATION ROADMAP -->
+<section class="prep">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Universal Roadmap</span>
+      <h2 class="section-title">How to Go from <span>Confused Student</span> to Confident Professional</h2>
+      <p class="section-sub">A step-by-step preparation plan that works for any career you choose.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Discover Your Interest</h3><p>Spend 1 week writing what excites you. Watch career videos. Talk to professionals. Take a free career assessment test online. Don't rush this step.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Research Career Options</h3><p>Deep-dive into 3–5 career options that match your interest. Know the typical day, salary, skills required, and growth path for each.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><h3>Shortlist & Validate</h3><p>Pick your top 2 careers. Find 2 professionals in each field on LinkedIn. Message them respectfully. Ask about their journey and honest experience.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><h3>Choose the Right Course & College</h3><p>Research colleges with UGC/AICTE approval. Check NAAC grade. Compare placement records. Don't fall for heavy marketing — check facts.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><h3>Start Skill Building</h3><p>Start free courses on Coursera, YouTube, or NPTEL. Don't wait for college to learn — skill-building starts today, at home.</p></div></div>
+      <div class="step"><div class="step-num">6</div><div class="step-content"><h3>Build Projects & Portfolio</h3><p>Theory without practice is useless. Build 2–3 real projects. Start a portfolio (GitHub, Behance, or a personal website). This is what gets you hired.</p></div></div>
+      <div class="step"><div class="step-num">7</div><div class="step-content"><h3>Internship & Real Experience</h3><p>Get at least 1 internship before graduating. Real-world experience teaches you more than 4 years of college. Apply early on Internshala and LinkedIn.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLEGE VERIFICATION -->
+<section class="college">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Before You Take Admission</span>
+      <h2 class="section-title">Don't Get Trapped in a <span>Fake College</span></h2>
+      <p class="section-sub">Check these 7 things before paying any college fees. One wrong decision = 3-4 years wasted.</p>
+    </div>
+    <div class="verify-grid">
+      <div class="verify-item"><div class="verify-icon">✅</div><div><h3>UGC Approved</h3><p>Verify the university is on UGC's official website. Degree from unrecognized university = useless degree.</p></div></div>
+      <div class="verify-item"><div class="verify-icon">🏛️</div><div><h3>AICTE Approval</h3><p>For Engineering, Management, and Technical courses — AICTE approval is mandatory. Always double-check.</p></div></div>
+      <div class="verify-item"><div class="verify-icon">⭐</div><div><h3>NAAC Grade</h3><p>A++ or A+ grade colleges have better infrastructure, faculty, and credibility. Avoid ungraded institutions.</p></div></div>
+      <div class="verify-item"><div class="verify-icon">💼</div><div><h3>Placement Support</h3><p>Ask for actual placement data: company names, average package, percentage placed. Don't believe brochures.</p></div></div>
+      <div class="verify-item"><div class="verify-icon">💰</div><div><h3>Fee Transparency</h3><p>Get total fee structure in writing. Check for hidden charges: exam fees, hostel, lab fees. Avoid surprises.</p></div></div>
+      <div class="verify-item"><div class="verify-icon">📜</div><div><h3>Course Validity</h3><p>Ensure the specific course you're joining is also approved — not just the institution. Verify on official portals.</p></div></div>
+      <div class="verify-item"><div class="verify-icon">🔗</div><div><h3>University Affiliation</h3><p>Is the college affiliated with a recognized state or central university? An affiliated college must verify this on the university website.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDANCE CTA -->
+<section class="guidance-cta">
+  <div class="container">
+    <h2>Still Confused? Let's Figure It Out <span style="color:var(--accent)">Together.</span></h2>
+    <p>Get personal guidance on the right career, right course, right college — and a clear action plan designed just for you.</p>
+    <div class="cta-features">
+      <div class="cta-feature"><span>✓</span> Career Selection</div>
+      <div class="cta-feature"><span>✓</span> Course Guidance</div>
+      <div class="cta-feature"><span>✓</span> College Shortlisting</div>
+      <div class="cta-feature"><span>✓</span> Scholarship Info</div>
+      <div class="cta-feature"><span>✓</span> Admission Support</div>
+      <div class="cta-feature"><span>✓</span> Doubt Clearing</div>
+    </div>
+    <div class="cta-group">
+      <a href="https://wa.me/919798686973" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp Now
+      </a>
+      <a href="https://wa.me/919798686973" class="btn-secondary">Talk to an Expert →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">FAQs</span>
+      <h2 class="section-title">Questions Students <span>Always Ask</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I choose the right career? <div class="faq-icon">+</div></div><div class="faq-a">Start with self-assessment — understand your interests, strengths, and personality. Then research career options that match, check market demand and salary potential, and validate by talking to real professionals. Don't decide based on what family says alone — your career is your life.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is salary the only factor to consider? <div class="faq-icon">+</div></div><div class="faq-a">No. Salary matters, but so does job satisfaction, work-life balance, growth potential, and personal fulfillment. A high-paying job you hate will burn you out. Aim for a career that balances good pay with genuine interest.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I build a great career without Engineering or Medical? <div class="faq-icon">+</div></div><div class="faq-a">Absolutely, yes. UI/UX designers, content creators, investment bankers, psychologists, hotel managers, and hundreds of other professionals earn excellent salaries without a single engineering or medical degree. The world has evolved — your career options should too.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Are there high-paying careers after Arts or Commerce? <div class="faq-icon">+</div></div><div class="faq-a">100%. Commerce students can become Chartered Accountants, Investment Bankers, Financial Analysts, or Digital Marketers. Arts students can pursue Law, Psychology, Journalism, Graphic Design, or Content Creation. Stream does not define your earnings — skills and knowledge do.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I get guidance for college admission too? <div class="faq-icon">+</div></div><div class="faq-a">Yes. We help you shortlist the right college for your career, check UGC/AICTE approval, understand fee structure, evaluate placements, and make an informed decision. Message us on WhatsApp — it's completely free.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is this guidance free? How can I contact? <div class="faq-icon">+</div></div><div class="faq-a">Yes, the initial guidance conversation is completely free. Just click the WhatsApp button and message us. We'll discuss your situation, answer your questions, and give you a personalized direction. No pressure, no sales — just honest guidance.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What if I've already chosen a wrong career path? <div class="faq-icon">+</div></div><div class="faq-a">It's never too late to course-correct. Many professionals switch careers in their 20s and early 30s successfully. We'll help you understand your options for pivoting — whether that means a lateral move, additional skills, or a completely new path. Message us and let's talk.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Your Career Is the <span>Most Important</span><br>Decision of Your Life.</h2>
+    <p>Don't choose blindly. Don't follow the crowd. Get clarity, get a plan, and get moving — with the right guidance.</p>
+    <div class="cta-group">
+      <a href="https://wa.me/919798686973" class="btn-primary" style="font-size:18px; padding: 18px 40px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Get My Free Career Guidance →
+      </a>
+    </div>
+    <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.4);">WhatsApp: +91 97986 86973 · Free Guidance · No Spam</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024 Career Clarity · Helping Indian Students Find Their Right Path · <a href="https://wa.me/919798686973" style="color: var(--accent);">Contact on WhatsApp</a></p>
+</footer>
+
+<script>
+  // Animated counters
+  const counters = document.querySelectorAll('.stat-num[data-target]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        let current = 0;
+        const step = target / 60;
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { el.textContent = target + '+'; clearInterval(timer); }
+          else { el.textContent = Math.floor(current) + '+'; }
+        }, 16);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => observer.observe(c));
+
+  // Category filter
+  function filterCats(cat, btn) {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.cat-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+  }
+
+  // Career search
+  function searchCareers(val) {
+    const query = val.toLowerCase();
+    document.querySelectorAll('.career-card').forEach(card => {
+      const name = card.dataset.name || '';
+      card.style.display = name.includes(query) ? '' : 'none';
+    });
+  }
+
+  // Show more careers (hide last 6 initially)
+  const allCards = document.querySelectorAll('.career-card');
+  let showAll = false;
+  allCards.forEach((card, i) => { if (i >= 12) card.classList.add('hidden'); });
+  function showMoreCareers() {
+    showAll = !showAll;
+    allCards.forEach((card, i) => {
+      if (i >= 12) card.classList.toggle('hidden', !showAll);
+    });
+    document.getElementById('showMoreBtn').textContent = showAll ? 'Show Less ↑' : 'Show More Careers ↓';
+  }
+
+  // FAQ toggle
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
